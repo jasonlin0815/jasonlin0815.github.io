@@ -90,6 +90,29 @@ section.info {
     height: 500px;
     text-align: center;
 }
+.button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 3px solid #5B5A5A;
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #5B5A5A;
+}
+.btnResume {
+    margin-right: 5%;
+}
+.btnContact {
+    margin-left: 5%;
+}
+
 /*---- End of Body ----*/
 
 /*---- Start Footer ----*/
@@ -110,7 +133,7 @@ footer {
 .links i {
     font-size: 50px;
     padding: 1% 1% 0 1%;
-    color: #C3D7DF;
+    color: #9BDDF7;
 }
 .links i:hover{
     color: #F5F5F5;
