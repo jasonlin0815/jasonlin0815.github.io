@@ -91,6 +91,31 @@ nav ul li a {
 }
 /*---- End of Header ----*/
 
+/*---- Start Footer ----*/
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #212121;
+    width: 100%;
+    height: 86px;
+}
+.links {
+    list-style-type: none;
+    text-align: left;
+}
+.links li {
+    display: inline;
+}
+.links i {
+    font-size: 50px;
+    padding: 1% 1% 0 1%;
+    color: #9BDDF7;
+}
+.links i:hover{
+    color: #F5F5F5;
+}
+/*---- End of Footer ----*/
+
 /*---- Start Body ----*/
 section {
     padding: 10px;
@@ -140,26 +165,3 @@ section.buttons {
 
 /*---- End of Body ----*/
 
-/*---- Start Footer ----*/
-footer {
-    position: absolute;
-    bottom: 0;
-    background-color: #212121;
-    width: 100%;
-    height: 86px;
-}
-.links {
-    list-style-type: none;
-    text-align: left;
-}
-.links li {
-    display: inline;
-}
-.links i {
-    font-size: 50px;
-    padding: 1% 1% 0 1%;
-    color: #9BDDF7;
-}
-.links i:hover{
-    color: #F5F5F5;
-}
