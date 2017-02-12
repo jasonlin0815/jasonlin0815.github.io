@@ -4,16 +4,56 @@ $(document).ready(function()
     setInterval('cursor()', 1000);
 
     // Navigation onMouseEnter event
+    setTimeout(navTabMsg, 5000);
 
     // Terminal message display
     setTimeout(displayTerminalMsg, 1000);
 
     // Center display
-    setTimeout(displayCenterMsg, 5000);
+    setTimeout(displayCenterMsg, 4000);
 
     // Enable Buttons
     setTimeout(enableButtons, 8500);
 });
+
+function navTabMsg()
+{
+    var nav = document.getElementById("nav");
+    var ele = document.getElementById("hovercmd");
+    var loopTimer;
+
+    // Add mouseenter event
+    nav.addEventListener('mouseover', navTabOnEnter, false);
+
+    // Add mouseleave event
+    nav.addEventListener('mouseleave', navTabOnExit, false);
+
+    function navTabOnEnter(event)
+    {
+        var cmd = "";
+        ele.innerHTML = "";
+
+        if(event.target.className === "current")
+            ele.innerHTML = "";
+        else
+            cmd = "load ~/" + event.target.id;
+
+        var arr = cmd.split("");
+        loopTimer = setInterval(function()
+        {
+            if(arr.length > 0)
+                ele.insertAdjacentHTML('beforeend', arr.shift());
+            else
+                clearInterval(loopTimer);
+        }, 80);
+    }
+
+    function navTabOnExit(event)
+    {
+        clearInterval(loopTimer);
+        ele.innerHTML = "";
+    }
+}
 
 // Cursor blinking effect
 function cursor()
@@ -30,12 +70,12 @@ function displayTerminalMsg()
 
     // Delay values are relative to first animation not to overall window
     setTimeout(display, 0, "jasonlin@homepage: ~$ ", ele);
-    setTimeout(typing, 1000, "run ~/init", ele);
-    setTimeout(display, 2000, "<br>Initializing environment...", ele);
-    setTimeout(display, 3000, "<br>Loading user configurations...", ele);
-    setTimeout(display, 3500, "<br>Executing program: intro.exe", ele);
-    setTimeout(display, 4000, "<br>Hello, World!", ele);
-    setTimeout(display, 4500, "<br>jasonlin@homepage: ~$ ", ele);
+    setTimeout(typing, 700, "run ~/init", ele);
+    setTimeout(display, 1800, "<br>Initializing environment...", ele);
+    setTimeout(display, 2200, "<br>Loading user configurations...", ele);
+    setTimeout(display, 2700, "<br>Executing program: intro.exe", ele);
+    setTimeout(display, 3300, "<br>Hello, World!", ele);
+    setTimeout(display, 4000, "<br>jasonlin@homepage: ~$ ", ele);
 }
 
 // Display message on the center of screen
