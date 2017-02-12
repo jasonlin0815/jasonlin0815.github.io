@@ -3,19 +3,19 @@ $(document).ready(function()
     // Cursor blinking
     setInterval('cursor()', 1000);
 
-    // Navigation options pop up
-    //navPopUp();
+    // Navigation onMouseEnter event
 
     // Terminal message display
-    displayTerminalMsg();
+    setTimeout(displayTerminalMsg, 1000);
 
     // Center display
-    displayCenterMsg();
+    setTimeout(displayCenterMsg, 5000);
 
     // Enable Buttons
-    enableButtons();
+    setTimeout(enableButtons, 8500);
 });
 
+// Cursor blinking effect
 function cursor()
 {
     $('#cursor')
@@ -23,104 +23,83 @@ function cursor()
     .animate({ opacity: 1 }, 'fast', 'swing');
 }
 
-function navPopUp()
-{
-    function navItemFloat(time, item)
-    {
-        setTimeout(function()
-        {
-            item.animate({ opacity: 1 }, 100);
-        }, time);
-    }
-
-    navItemFloat(200, $('#hometab'));
-    navItemFloat(300, $('#abouttab'));
-    navItemFloat(400, $('#resumetab'));
-    navItemFloat(500, $('#profoliotab'));
-}
-
+// Display message on the terminal console effect
 function displayTerminalMsg()
 {
-    ele = document.getElementById("terminal");
+    var ele = document.getElementById("terminal");
 
-    display(100, "jasonlin@homepage: ~$ ", ele);
-    type(1400, "run ~/init", ele);
-    display(2700, "<br>Initializing environment...", ele);
-    display(2900, "<br>Loading user configurations...", ele);
-    display(3100, "<br>Executing program: intro.exe", ele);
-    display(3300, "<br>Hello, World!", ele);
-    display(3600, "<br>jasonlin@homepage: ~$ ", ele);
+    // Delay values are relative to first animation not to overall window
+    setTimeout(display, 0, "jasonlin@homepage: ~$ ", ele);
+    setTimeout(typing, 1000, "run ~/init", ele);
+    setTimeout(display, 2000, "<br>Initializing environment...", ele);
+    setTimeout(display, 3000, "<br>Loading user configurations...", ele);
+    setTimeout(display, 3500, "<br>Executing program: intro.exe", ele);
+    setTimeout(display, 4000, "<br>Hello, World!", ele);
+    setTimeout(display, 4500, "<br>jasonlin@homepage: ~$ ", ele);
 }
 
+// Display message on the center of screen
 function displayCenterMsg()
 {
-    ele = document.getElementById("center-info");
+    var ele = document.getElementById("center-info");
 
-    type(4000, "I am a", ele);
-    erase(5000, ele);
-    type(5500, "Software Engineer.", ele);
+    // All delays are relative to the first animation in the function
+    setTimeout(typing, 0, "I am a", ele);
+    setTimeout(erase, 1500, ele);
+    setTimeout(typing, 3000, "Software Engineer.", ele);
 }
 
+// Clickable buttons appearing on screen
 function enableButtons()
 {
-    setTimeout(function()
-    {
-        document.getElementById("btnRes").disabled = false;
-        document.getElementById("btnCon").disabled = false;
+    // Enable both buttons
+    document.getElementById("btnRes").disabled = false;
+    document.getElementById("btnCon").disabled = false;
 
-        $('#btnRes').animate({ opacity: 1 }, 'fast', 'swing');
-        $('#btnCon').animate({ opacity: 1 }, 'fast', 'swing');
-    }, 6000);
+    // Animate the appearing effect
+    $('#btnRes').animate({ opacity: 1 }, 'fast', 'swing');
+    $('#btnCon').animate({ opacity: 1 }, 'fast', 'swing');
 }
 
-function display(time, value, element)
+// Support function to display the message without typing
+function display(value, element)
 {
-    setTimeout(function()
-    {
-        element.innerHTML += value;
-    }, time);
+    element.innerHTML += value;
 }
 
-function type(time, value, element)
+// Support function to mimic typing effect
+function typing(value, element)
 {
     var arr = value.split("");
 
-    setTimeout(function()
+    var loopTimer = setInterval(function()
     {
-        var loopTimer = setInterval(function()
+        if(arr.length > 0)
         {
-            if(arr.length > 0)
-            {
-                element.insertAdjacentHTML('beforeend', arr.shift());
-            }
-            else
-            {
-                clearInterval(loopTimer);
-            }
-        }, 80);
-    }, time);
+            element.insertAdjacentHTML('beforeend', arr.shift());
+        }
+        else
+        {
+            clearInterval(loopTimer);
+        }
+    }, 80);
 }
 
-function erase(time, element)
+// Support function to mimic erasing effect
+function erase(element)
 {
-    var value;
-    var length;
+    var value = element.innerHTML;
+    var length = value.length;
 
-    setTimeout(function()
+    var loopTimer = setInterval(function()
     {
-        value = element.innerHTML;
-        length = value.length;
-
-        var loopTimer = setInterval(function()
+        if(length >= 0)
         {
-            if(length >= 0)
-            {
-                element.innerHTML = value.substr(0, length--);
-            }
-            else
-            {
-                clearInterval(loopTimer);
-            }
-        }, 80)
-    }, time);
+            element.innerHTML = value.substr(0, length--);
+        }
+        else
+        {
+            clearInterval(loopTimer);
+        }
+    }, 80);
 }
