@@ -34,8 +34,8 @@ header {
 
 /* Logo */
 #logo {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     padding: 1%;
     margin: 0 auto;
     float: left;
@@ -107,7 +107,8 @@ footer {
 /*---- MEDIA SECTION ----*/
 @media screen and (max-width: 768px) {
     #logo {
-        margin-left: 20px;
+        margin-left: 30px;
+        margin-top: 5px;
     }
     #menu-icon {
         display: inline-block;

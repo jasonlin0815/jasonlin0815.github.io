@@ -29,6 +29,10 @@ function navTabMsg()
         event.preventDefault();
         var target = getEventTarget(event);
 
+        // Prevent li from redirecting
+        if (event.target.tagName === "LI")
+            return;
+
         var ele = document.getElementById("terminaldisp");
         typing("load ~/" + target.innerHTML, ele);
 
