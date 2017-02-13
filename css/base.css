@@ -19,6 +19,27 @@ body {
     font-family: "Lucida Sans Typewriter", monospace;
 }
 
+/* For center info display messages */
+h1 {
+    line-height: 200%;
+    font-size: 70px;
+    font-weight: 1000;
+}
+/* For terminal console message without <script>*/
+h3 {
+    line-height: 125%;
+    padding: 1% 0;
+    font-weight: 500;
+    color: #55CF41;
+}
+/* For terminal console message typing */
+span {
+    line-height: 125%;
+    padding: 1% 0;
+    font-weight: 500;
+    color: #55CF41;
+}
+
 /*---- Navigation Bar ----*/
 header {
     background-color: #212121;
