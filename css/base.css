@@ -19,6 +19,27 @@ body {
     font-family: "Lucida Sans Typewriter", monospace;
 }
 
+/* For center info display messages */
+h1 {
+    line-height: 200%;
+    font-size: 70px;
+    font-weight: 1000;
+}
+/* For terminal console message without <script>*/
+h3 {
+    line-height: 125%;
+    padding: 1% 0;
+    font-weight: 500;
+    color: #55CF41;
+}
+/* For terminal console message typing */
+span {
+    line-height: 125%;
+    padding: 1% 0;
+    font-weight: 500;
+    color: #55CF41;
+}
+
 /*---- Navigation Bar ----*/
 header {
     background-color: #212121;
@@ -49,11 +70,12 @@ nav {
 }
 #menu-icon {
     display: hidden;
-    width: 40px;
-    height: 40px;
-    background-color: #FFFFFF;
+    width: 70px;
+    height: 70px;
+    background: url(../img/menuIcon.png) center;
+    background-repeat: no-repeat;
 }
-a:hover#menu-icon {
+li:hover#menu-icon {
     border-radius: 5px 5px 0 0;
 }
 ul {
@@ -98,7 +120,42 @@ footer {
     padding: 1% 1% 0 1%;
     color: #9BDDF7;
 }
-.links i:hover{
+.links i:hover {
     color: #F5F5F5;
 }
 /*---- End of Footer ----*/
+
+/*---- MEDIA SECTION ----*/
+@media screen and (max-width: 768px) {
+    #logo {
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+    #menu-icon {
+        display: inline-block;
+    }
+    nav ul, nav:active ul {
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 20px;
+        background: #FFFFFF;
+        right: 20px;
+        top: 60px;
+        border: 1px solid #FFF;
+        border-radius: 10px 0 10px 10px;
+        width: 50%;
+    }
+    nav:hover ul {
+        display: block;
+    }
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .current {
+        background: #FFFFFF;
+    }
+
+}
