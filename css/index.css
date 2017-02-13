@@ -8,25 +8,26 @@
 /*---- Overall website styles ----*/
 body {
     background: #000000;
-    margin: 0;
 }
 img {
     width: 150px;
     height: 150px;
 }
 
-section.power {
+/* Centering section in the middle of page */
+.power {
     position: absolute;
     margin: auto;
-    position: absolute;
+    margin-right: -50%;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
+/* Create a inner section for power cycle animation */
+/* width and height need to be same as img */
 .power-inner {
-    background-color: #25B1E5;
-    height: 150px;
     width: 150px;
+    height: 150px;
+    background-color: #25B1E5;
 }
