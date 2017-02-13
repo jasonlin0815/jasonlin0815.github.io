@@ -60,7 +60,6 @@ ul {
     list-style-type: none;
 }
 nav ul li {
-    font-family: "Lucida Sans Typewriter", monospace;
     font-size: 150%;
     display: inline-block;
     float: left;
@@ -103,5 +102,3 @@ footer {
     color: #F5F5F5;
 }
 /*---- End of Footer ----*/
-
-/*---- Page content specific css goes here ----*/
