@@ -1,0 +1,33 @@
+/*---- Reset inherit stylings ----*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*---- Overall website styles ----*/
+body {
+    background: #000000;
+}
+img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Centering section in the middle of page */
+.power {
+    position: absolute;
+    margin: auto;
+    margin-right: -50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Create a inner section for power cycle animation */
+/* width and height need to be same as img */
+.power-inner {
+    width: 150px;
+    height: 150px;
+    background-color: #25B1E5;
+}
