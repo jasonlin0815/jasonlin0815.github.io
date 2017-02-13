@@ -66,7 +66,7 @@ function cursor()
 // Display message on the terminal console effect
 function displayTerminalMsg()
 {
-    var ele = document.getElementById("terminal");
+    var ele = document.getElementById("terminaldisp");
 
     // Delay values are relative to first animation not to overall window
     setTimeout(display, 0, "jasonlin@homepage: ~$ ", ele);
@@ -81,7 +81,7 @@ function displayTerminalMsg()
 // Display message on the center of screen
 function displayCenterMsg()
 {
-    var ele = document.getElementById("center-info");
+    var ele = document.getElementById("infodisp");
 
     // All delays are relative to the first animation in the function
     setTimeout(typing, 0, "I am a", ele);
