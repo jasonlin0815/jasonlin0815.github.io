@@ -4,16 +4,16 @@ $(document).ready(function()
     setInterval('cursor()', 1000);
 
     // Navigation onMouseEnter event
-    setTimeout(navTabMsg, 5000);
+    setTimeout(navTabMsg, 4500);
 
     // Terminal message display
-    setTimeout(displayTerminalMsg, 1000);
+    setTimeout(displayTerminalMsg, 600);
 
     // Center display
-    setTimeout(displayCenterMsg, 4000);
+    setTimeout(displayCenterMsg, 3000);
 
     // Enable Buttons
-    setTimeout(enableButtons, 8500);
+    setTimeout(enableButtons, 5000);
 });
 
 function navTabMsg()
@@ -22,37 +22,27 @@ function navTabMsg()
     var ele = document.getElementById("hovercmd");
     var loopTimer;
 
-    // Add mouseenter event
-    nav.addEventListener('mouseover', navTabOnEnter, false);
-
-    // Add mouseleave event
-    nav.addEventListener('mouseleave', navTabOnExit, false);
-
-    function navTabOnEnter(event)
+    // Add onclick effect
+    nav.onclick = function(event)
     {
-        var cmd = "";
-        ele.innerHTML = "";
+        // Prevent default anchor behavior and obtain target page
+        event.preventDefault();
+        var target = getEventTarget(event);
 
-        if(event.target.className === "current")
-            ele.innerHTML = "";
-        else
-            cmd = "load ~/" + event.target.id;
+        var ele = document.getElementById("terminaldisp");
+        typing("load ~/" + target.innerHTML, ele);
 
-        var arr = cmd.split("");
-        loopTimer = setInterval(function()
+        setTimeout(function()
         {
-            if(arr.length > 0)
-                ele.insertAdjacentHTML('beforeend', arr.shift());
-            else
-                clearInterval(loopTimer);
-        }, 80);
+            window.location = target;
+        }, 1200);
     }
+}
 
-    function navTabOnExit(event)
-    {
-        clearInterval(loopTimer);
-        ele.innerHTML = "";
-    }
+function getEventTarget(e)
+{
+    e = e || window.event;
+    return e.target || e.srcElement;
 }
 
 // Cursor blinking effect
@@ -70,12 +60,12 @@ function displayTerminalMsg()
 
     // Delay values are relative to first animation not to overall window
     setTimeout(display, 0, "jasonlin@homepage: ~$ ", ele);
-    setTimeout(typing, 700, "run ~/init", ele);
-    setTimeout(display, 1800, "<br>Initializing environment...", ele);
-    setTimeout(display, 2200, "<br>Loading user configurations...", ele);
-    setTimeout(display, 2700, "<br>Executing program: intro.exe", ele);
-    setTimeout(display, 3300, "<br>Hello, World!", ele);
-    setTimeout(display, 4000, "<br>jasonlin@homepage: ~$ ", ele);
+    setTimeout(typing, 500, "run ~/init", ele);
+    setTimeout(display, 1500, "<br>Initializing environment...", ele);
+    setTimeout(display, 2000, "<br>Loading user configurations...", ele);
+    setTimeout(display, 2500, "<br>Executing program: intro.exe", ele);
+    setTimeout(display, 3000, "<br>Hello, World!", ele);
+    setTimeout(display, 3500, "<br>jasonlin@homepage: ~$ ", ele);
 }
 
 // Display message on the center of screen
@@ -85,8 +75,8 @@ function displayCenterMsg()
 
     // All delays are relative to the first animation in the function
     setTimeout(typing, 0, "I am a", ele);
-    setTimeout(erase, 1500, ele);
-    setTimeout(typing, 3000, "Software Engineer.", ele);
+    setTimeout(erase, 1200, ele);
+    setTimeout(typing, 2500, "Software Engineer.", ele);
 }
 
 // Clickable buttons appearing on screen
