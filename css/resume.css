@@ -96,3 +96,19 @@ section.module.parallax-3 {
 .exp p {
     padding-left: 10px;
 }
+
+.school {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 90px;
+}
+.school:last-child {
+    margin-bottom: 50px;
+}
+.school h2 {
+    font-size: 30px;
+    line-height: 10px;
+}
+.school p {
+    font-size: 24px;
+}
