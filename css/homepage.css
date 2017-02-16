@@ -1,69 +1,117 @@
-/*---- Start Body ----*/
+/*---- Reset inherit stylings ----*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*---- Overall website styles ----*/
+html {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #2E2D30;
+    color: #B2DDEC;
+    font-family: "Lucida Sans Typewriter", monospace;
+}
+
+h1 {
+    font-size: 100px;
+    letter-spacing: 5px;
+}
+
 section {
-    padding: 10px;
+    float: left;
+    display: inline-block;
     overflow: hidden;
 }
+
+section.rightpanel {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    margin-left: -300px;
+    z-index: 1;
+    overflow: hidden;
+}
+section.sidebar-wrapper {
+    width: 300px;
+    height: 100%;
+    margin-left: 300px;
+    background-color: rgba(178, 221, 236, 0.7);
+}
+
+#logo {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 4%;
+    right: 110px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
+.sidebar {
+    display: inline;
+}
+.sidebar ul {
+    list-style-type: none;
+}
+.sidebar a {
+    color: #535057;
+    text-decoration: none;
+}
+
+.internal {
+    margin-top: 55%;
+    text-align: center;
+}
+.internal li {
+    margin: 5% auto;
+}
+.internal a {
+    font-size: 20px;
+}
+
+.external {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.external li {
+    display: inline;
+    margin: 0 auto;
+}
+.external a {
+    margin: 5%;
+}
+.external i {
+    font-size: 35px;
+    padding: 1% 1% 0 1%;
+}
+
+section.leftpanel {
+    width: 100%;
+}
+
 section.terminal {
     float: left;
-    width: 40%;
+    width: 300px;
     height: 200px;
 }
-
-section.info {
-    float: left;
-    width: 95%;
-    height: 100px;
-    text-align: center;
+.terminal-inner {
+    width: 300px;
+    margin: 1%;
 }
 
-section.buttons {
+section.center {
     float: left;
     width: 95%;
     text-align: center;
-}
-.button {
-    background-color: #000000;
-    color: #FFFFFF;
-    border: 3px solid #5B5A5A;
-    border-radius: 10px;
-    padding: 20px 40px;
-    text-align: center;
-    display: inline-block;
-    font-size: 30px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    opacity: 0;
-}
-.button:hover {
-    background-color: #5B5A5A;
-    border-bottom: 5px solid #4C4C4C;
-}
-.btnResume {
-    margin-right: 5%;
-}
-.btnContact {
-    margin-left: 5%;
+    margin-top: 10%;
 }
 
-/*---- End of Body ----*/
 
-/* For center info display messages */
-h1 {
-    line-height: 200%;
-    font-size: 70px;
-    font-weight: 1000;
-}
-/* For terminal console message without <script>*/
-h3 {
-    line-height: 125%;
-    padding: 1% 0;
-    font-weight: 500;
-    color: #55CF41;
-}
-/* For terminal console message typing */
-span {
-    line-height: 125%;
-    padding: 1% 0;
-    font-weight: 500;
-    color: #55CF41;
-}
