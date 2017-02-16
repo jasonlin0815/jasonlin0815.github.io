@@ -16,6 +16,16 @@ body {
     font-family: "Lucida Sans Typewriter", monospace;
 }
 
+#logo {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 4%;
+    right: 110px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
 section {
     float: left;
     display: inline-block;
@@ -23,12 +33,12 @@ section {
 }
 
 section.rightpanel {
-    position: fixed;
+    position: absolute;
     width: 300px;
     height: 100%;
+    right: 0;
     margin-left: -300px;
     z-index: 1;
-    overflow: hidden;
 }
 section.sidebar-wrapper {
     width: 300px;
@@ -75,4 +85,8 @@ section.sidebar-wrapper {
 .external i {
     font-size: 35px;
     padding: 1% 1% 0 1%;
+}
+
+section.leftpanel {
+    width: 100%;
 }

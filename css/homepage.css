@@ -21,6 +21,16 @@ h1 {
     letter-spacing: 5px;
 }
 
+#logo {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 4%;
+    right: 110px;
+    background-color: #FFFFFF;
+    display: block;
+}
+
 section {
     float: left;
     display: inline-block;
@@ -40,16 +50,6 @@ section.sidebar-wrapper {
     height: 100%;
     margin-left: 300px;
     background-color: rgba(178, 221, 236, 0.7);
-}
-
-#logo {
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    top: 4%;
-    right: 110px;
-    background-color: #FFFFFF;
-    display: block;
 }
 
 .sidebar {
@@ -91,10 +91,6 @@ section.sidebar-wrapper {
 .external i {
     font-size: 35px;
     padding: 1% 1% 0 1%;
-}
-
-section.leftpanel {
-    width: 100%;
 }
 
 section.terminal {
