@@ -24,6 +24,7 @@ body {
     right: 110px;
     background-color: #FFFFFF;
     display: block;
+    z-index: 1;
 }
 
 section {
@@ -33,7 +34,7 @@ section {
 }
 
 section.rightpanel {
-    position: absolute;
+    position: fixed;
     width: 300px;
     height: 100%;
     right: 0;
@@ -43,6 +44,7 @@ section.rightpanel {
 section.sidebar-wrapper {
     width: 300px;
     height: 100%;
+    margin-left: 300px;
     background-color: rgba(178, 221, 236, 0.7);
 }
 
@@ -62,10 +64,15 @@ section.sidebar-wrapper {
     text-align: center;
 }
 .internal li {
+    padding: 20px 0;
     margin: 5% auto;
 }
 .internal a {
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.current a {
+    border-bottom: 2px solid #535057;
 }
 
 .external {

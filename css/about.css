@@ -1,0 +1,10 @@
+section.leftpanel {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    height: 600px;
+    margin: 5% auto;
+    border-bottom: 3px solid white;
+}

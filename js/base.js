@@ -10,17 +10,45 @@ $(document).ready(function()
             hideSidebar();
     }
 
-    // On mouse entering left panel effect
-    document.getElementById("panel").addEventListener("mouseenter", showSidebar);
-    document.getElementById("panel").addEventListener("mouseleave", hideSidebar);
+    // Right panel hover event
+    $(".rightpanel").hover(showSidebar, hideSidebar);
+
+    // Internal link hover effect
+    $(".internal").hover(dimCurrent, litCurrent);
+
+    // Internal anchor hover effect
+    $(".internal li").hover(internalHoverIn, internalHoverOut);
 });
 
 function showSidebar()
 {
-    $("#sidebarWrapper").animate({marginLeft: '0'}, 400);
+    $(".sidebar-wrapper").animate({marginLeft: '0'}, 400);
 }
 
 function hideSidebar()
 {
-    $("#sidebarWrapper").animate({marginLeft: '300px'}, 500);
+    $(".sidebar-wrapper").animate({marginLeft: '300px'}, 500);
+}
+
+function dimCurrent()
+{
+    $(".current").find("a").css('borderBottom', '2px solid rgba(83, 80, 87, 0.3)');
+}
+
+function litCurrent()
+{
+    $(".current").find("a").css('borderBottom', '2px solid rgba(83, 80, 87, 1)');
+}
+
+function internalHoverIn()
+{
+    $(this).find("a").css('borderBottom', '2px solid rgba(83, 80, 87, 1)');
+}
+
+function internalHoverOut()
+{
+    if($(this).hasClass('current'))
+        $(this).find("a").css('borderBottom', '2px solid rgba(83, 80, 87, 0.3)');
+    else
+        $(this).find("a").css('borderBottom', 'none');
 }
