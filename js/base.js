@@ -11,7 +11,8 @@ $(document).ready(function()
     }
 
     // Right panel hover event
-    $(".rightpanel").hover(showSidebar, hideSidebar);
+    // Delay effect to prevent sidebar poping right out after page transition
+    setTimeout(700, $(".rightpanel").hover(showSidebar, hideSidebar));
 
     // Internal link hover effect
     $(".internal").hover(dimCurrent, litCurrent);

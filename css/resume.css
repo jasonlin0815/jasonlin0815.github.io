@@ -1,0 +1,99 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+section.leftpanel {
+    text-align: center;
+}
+section.content-wrapper {
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+    display: inline;
+}
+section.module:last-child {
+    margin-bottom: 0;
+}
+section.module p:last-child {
+    margin-bottom: 0;
+}
+
+section.module.parallax {
+    width: 100%;
+    height: 600px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section.module.parallax h1 {
+    line-height: 600px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.module.parallax-1 {
+    background-image: url("../img/parallax1.jpg");
+}
+
+section.module.parallax-2 {
+    background-image: url("../img/parallax2.jpg");
+}
+
+section.module.parallax-3 {
+    background-image: url("../img/parallax3.jpg");
+}
+
+section.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+}
+
+.container ul {
+    list-style-type: none;
+}
+.skill {
+    width: 30%;
+    height: 300px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.exp {
+    max-width: none;
+    width: 90%;
+}
+.exp.leftbox {
+    float: left;
+    background-color: #86DEFB;
+}
+.exp.rightbox {
+    float: right;
+    background-color: #C05875;
+}
+.exp h2 {
+    text-align: center;
+}
+.exp p {
+    padding-left: 10px;
+}
+
+.school {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 90px;
+}
+.school:last-child {
+    margin-bottom: 50px;
+}
+.school h2 {
+    font-size: 30px;
+    line-height: 10px;
+}
+.school p {
+    font-size: 24px;
+}

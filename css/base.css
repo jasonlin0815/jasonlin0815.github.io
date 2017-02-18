@@ -6,8 +6,7 @@
 }
 
 /*---- Overall website styles ----*/
-html {
-    position: relative;
+html, body {
     height: 100%;
 }
 body {
@@ -30,7 +29,6 @@ body {
 section {
     float: left;
     display: inline-block;
-    overflow: hidden;
 }
 
 section.rightpanel {
@@ -40,6 +38,7 @@ section.rightpanel {
     right: 0;
     margin-left: -300px;
     z-index: 1;
+    display: inline;
 }
 section.sidebar-wrapper {
     width: 300px;
@@ -96,4 +95,5 @@ section.sidebar-wrapper {
 
 section.leftpanel {
     width: 100%;
+    display: block;
 }

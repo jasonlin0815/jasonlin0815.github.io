@@ -1,0 +1,40 @@
+section.leftpanel
+{
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+}
+
+.list {
+    float: left;
+    height: 100%;
+    margin: 10% auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list li {
+    margin: 10% 0;
+}
+
+.list a {
+    float: left;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+.list h1 {
+    font-size: 75px;
+    line-height: 10px;
+    color: rgba(178, 221, 236, 0.4);;
+}
+.list h3 {
+    width: 100%;
+    font-size: 30px;
+    color: rgba(178, 221, 236, 0.8);
+    text-align: center;
+}

@@ -1,47 +1,31 @@
-section.leftpanel {
-    text-align: center;
-}
-
 h1 {
+    text-align: center;
     font-size: 72px;
-    padding: 10px 0;
 }
 p {
     text-align: justify;
     margin: 2%;
 }
 
-.container {
-    width: 80%;
-    height: 600px;
-    margin: 5% auto;
-    border-bottom: 3px solid white;
+.content {
     display: block;
+    width: 80%;
+    margin: 10% auto;
+    border-bottom: 2px solid white;
 }
 
-.icon i {
-    float: left;
-    margin: 1%;
-    font-size: 150px;
-    color: #B2DDEC;
+.upper {
+    display: flex;
 }
 
-section.detail-wrapper {
-    float: left;
-    width: 100%;
-    text-align: center;
+.img {
+    width: 300px;
+    height: 300px;
+    background-color: #FFF;
 }
-section.detail-wrapper div {
-    float: left;
-    width: 30%;
-    margin: 5% 1% 1% 1%;
-    display: inline;
-}
-section.detail-wrapper i {
-    margin: 3%;
+.text {
+    flex: 1;
 }
 
-.textaligner {
-    width: 75%;
-    border: 1px solid red;
-}
+
+
