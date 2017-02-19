@@ -1,0 +1,10 @@
+section.gallery-wrapper {
+    display: block;
+    float: none;
+    margin: 5% auto;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
