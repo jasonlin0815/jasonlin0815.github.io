@@ -1,10 +1,12 @@
 $(document).ready(function()
 {
+    var displayIndex = 0;
+
     // Hide side description rapidly on start
     setTimeout(hideContent, 1000);
 
     // Description trigger on hover
-    $(".content-trigger").hover(showContent, hideContent);
+    $(".content").hover(showContent, hideContent);
 
     // Thumbnail hover effect
     $(".gallery-img").hover(thumbnailHoverIn, thumbnailHoverOut);
@@ -12,6 +14,13 @@ $(document).ready(function()
     // Thumbnail onclick effect
     $(".gallery-img").on("click", thumbnailOnClick);
 
+    // Hide gallery viewer
+    setTimeout(hideGallery, 1000);
+
+    // Trigger to show gallery
+    $(".gallery-wrapper").hover(showGallery, hideGallery);
+
+    $(".gallery-wrapper img").load(cropImage);
 });
 
 function showContent()
@@ -26,10 +35,14 @@ function hideContent()
 
 function thumbnailHoverIn()
 {
-    if(!$(this).hasClass("selected"))
+    if($(this).hasClass("selected"))
+    {
+        return;
+    }
+    else
     {
         $(this).find("img").css({
-            "border": "4px solid rgba(178, 221, 236, 0.7)"
+            "opacity": "1"
         });
     }
 }
@@ -37,20 +50,34 @@ function thumbnailHoverIn()
 function thumbnailHoverOut()
 {
     $(this).find("img").css({
-        "border": "0"
+        "opacity": "0.7"
     });
+}
+
+function hideGallery()
+{
+    $(".gallery-wrapper").animate({marginBottom: '-15%'}, 400);
+}
+
+function showGallery()
+{
+    $(".gallery-wrapper").animate({marginBottom: '0%'}, 400);
 }
 
 function thumbnailOnClick()
 {
     var src = $(this).find("img").attr("src");
-    $(".selected").css({
-        "border": "0"
-    })
+
+    // Revert previous selected img effect
+    $(".selected").find("img").fadeTo(500, 0.7);
+    $(".selected").removeClass("selected");
+
+    // Add selected class to current selected image
     $(this).addClass("selected");
     $(".fullimg").fadeOut(500, function()
     {
         $(".fullimg").css("backgroundImage", "url(" + src + ")");
         $(".fullimg").fadeIn(500);
     });
+    $(".selected").find("img").fadeIn(500);
 }

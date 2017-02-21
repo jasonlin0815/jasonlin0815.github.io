@@ -43,7 +43,7 @@ section.rightpanel {
 section.sidebar-wrapper {
     width: 300px;
     height: 100%;
-    margin-left: 300px;
+    margin-left: 0;
     background-color: rgba(178, 221, 236, 0.7);
 }
 
