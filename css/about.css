@@ -9,11 +9,16 @@ p {
 
 .fab {
     position: fixed;
-    width: 150px;
-    height: 150px;
-    top: 15%;
-    left: 15%;
-    border: 1px solid red;
+    font-size: 100px;
+    color: #F3867B;
+    bottom: 10%;
+    width: 110px;
+    height: 110px;
+    left: 7%;
+    opacity: .7;
+}
+.fab a {
+    color: inherit;
 }
 
 .content {
@@ -91,6 +96,11 @@ p {
     border-bottom: 2px solid rgba(178, 221, 236, 0.4);
 }
 
+.job:last-child {
+    border-bottom: none;
+    margin-bottom: 5%;
+}
+
 .job-title {
     position: relative;
     width: 100%;
@@ -118,8 +128,7 @@ p {
     letter-spacing: 10px;
     opacity: .1;
 }
-
-.job-content {
+.job-desc {
     width: 80%;
     margin: 0 auto;
 }
@@ -127,19 +136,20 @@ p {
 .school {
     float: left;
     width: 70%;
-    height: 200px;
+    height: 250px;
     position: relative;
     margin: 0 5%;
 }
 .school h1 {
     position: absolute;
     font-size: 70px;
-    opacity: 0.6;
 }
 .school h3 {
     position: absolute;
-    top: 60px;
-    left: 54%;
+    font-size: 30px;
+    top: 70px;
+    left: 20%;
+    opacity: 0.6;
 }
 .school p {
     position: absolute;
