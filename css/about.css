@@ -27,7 +27,7 @@ p {
     display: flex;
     min-height: 50%;
     width: 100%;
-    margin: 10% auto;
+    margin: 5% auto;
     border-bottom: 2px solid rgba(178, 221, 236, 0.4);
 }
 
@@ -47,7 +47,8 @@ p {
 .hi h1 {
     font-size: 300px;
     opacity: .5;
-    margin: 0 auto;
+    margin: 5% auto;
+    margin-left: 20%;
 }
 
 .text {
@@ -59,6 +60,7 @@ p {
     margin: 5% auto;
 }
 .text p {
+    font-size: 20px;
     width: 70%;
     margin: 0 auto;
     opacity: .9;
@@ -69,51 +71,92 @@ p {
 }
 .skill-content {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skill-mid {
+    opacity: 0.7;
+}
+.skill-low {
+    opacity: 0.5;
 }
 .skill-content h3 {
+    opacity: inherit;
     font-size: 25px;
     margin: 10px auto;
 }
-.skill-high {
-    opacity: 0.9;
-}
-.skill-mid {
-    opacity: 0.6;
-}
-.skill-low {
-    opacity: 0.4;
+
+.job-left {
+    width: 70%;
+    border-bottom: 2px solid rgba(178, 221, 236, 0.4);
 }
 
 .job-title {
     position: relative;
     width: 100%;
     height: 200px;
-    margin-top: 5%;
 }
 .job-title h1 {
+    font-size: 78px;
     position: absolute;
     top: 20%;
-    left: 5%;
+    left: 8%;
     opacity: .9;
 }
 .job-title p {
     position: absolute;
     font-size: 30px;
-    bottom: 0;
-    left: 20%;
+    bottom: 10%;
+    left: 0;
     opacity: .7;
 }
 .job-title h3 {
     position: absolute;
     font-size: 100px;
-    right: 0;
+    right: 10%;
     top: 40%;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
     opacity: .1;
 }
 
-.job-section {
-    width: 100%;
+.job-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.school {
+    float: left;
+    width: 70%;
+    height: 200px;
+    position: relative;
+    margin: 0 5%;
+}
+.school h1 {
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.6;
+}
+.school h3 {
+    position: absolute;
+    top: 60px;
+    left: 54%;
+}
+.school p {
+    position: absolute;
+    bottom: 0;
+}
+
+.conclude {
+    position: relative;
+    display: flex;
+}
+.conclude h3 {
+    line-height: 70px;
+}
+.conclude h1 {
+    font-size: 170px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.3;
 }
