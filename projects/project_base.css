@@ -1,0 +1,16 @@
+h1 {
+    font-size: 100px;
+    opacity: 0.4;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    width: 45%;
+    margin: 0 auto;
+    text-align: justify
+}
+
+section.leftpanel {
+    height: 100%;
+}
