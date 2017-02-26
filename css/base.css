@@ -21,7 +21,7 @@ body {
     width: 80px;
     top: 4%;
     right: 110px;
-    background-color: #FFFFFF;
+    background: url(../statics/icon.png) no-repeat center;
     display: block;
     z-index: 1;
 }
@@ -37,7 +37,7 @@ section.rightpanel {
     height: 100%;
     right: 0;
     margin-left: -300px;
-    z-index: 1;
+    z-index: 10;
     display: inline;
 }
 section.sidebar-wrapper {

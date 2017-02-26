@@ -13,14 +13,13 @@ $(document).ready(function()
 
     // Thumbnail onclick effect
     $(".gallery-img").on("click", thumbnailOnClick);
+    $(".gallery-img iframe").on("click", thumbnailOnClick);
 
     // Hide gallery viewer
     setTimeout(hideGallery, 1000);
 
     // Trigger to show gallery
     $(".gallery-wrapper").hover(showGallery, hideGallery);
-
-    $(".gallery-wrapper img").load(cropImage);
 });
 
 function showContent()
@@ -66,18 +65,39 @@ function showGallery()
 
 function thumbnailOnClick()
 {
-    var src = $(this).find("img").attr("src");
+         var src = $(this).find("img");
 
-    // Revert previous selected img effect
-    $(".selected").find("img").fadeTo(500, 0.7);
-    $(".selected").removeClass("selected");
+        // Revert previous selected img effect
+        $(".selected").find("img").fadeTo(500, 0.7);
+        $(".selected").removeClass("selected");
 
-    // Add selected class to current selected image
-    $(this).addClass("selected");
-    $(".fullimg").fadeOut(500, function()
-    {
-        $(".fullimg").css("backgroundImage", "url(" + src + ")");
-        $(".fullimg").fadeIn(500);
-    });
-    $(".selected").find("img").fadeIn(500);
+        // Remove iframe in fullimg div
+        $(".fullimg iframe").remove();
+
+        // Add selected class to current selected image
+        $(this).addClass("selected");
+        $(".fullimg").fadeOut(500, function()
+        {
+            if(src.hasClass("video"))
+            {
+                var url = "https://www.youtube.com/embed/" + src.attr("id");
+                $(".fullimg").css("backgroundImage", "none");
+
+                // Build iframe tag
+                var iframe = $("<iframe>", {"src": url});
+                $(".fullimg").append(iframe);
+            }
+            else
+            {
+                // Find image source
+                var url = src.attr("src").split(".", 1);
+                var jpgurl = url[0] + ".jpg";
+
+                // Replace with jpeg version
+                $(".fullimg").css("backgroundImage", "url(" + jpgurl + ")");
+            }
+            $(".fullimg").fadeIn(500);
+        });
+        $(".selected").find("img").fadeIn(500);
+
 }
