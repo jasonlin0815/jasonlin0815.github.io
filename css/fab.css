@@ -1,0 +1,24 @@
+/* FAB holder */
+#fab {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 75px;
+    right: 100px;
+    background: url(../statics/FAB.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Menu icon that darkens current viewing page */
+#fab div {
+    width: 55px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: #2E2D30;
+    opacity: 0.5;
+}
+#fab-current-page {
+    opacity: 1 !important;
+}

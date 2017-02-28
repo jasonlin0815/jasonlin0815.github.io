@@ -1,0 +1,53 @@
+/* Navigation bar, default hidden */
+#navbar {
+    /*display: hidden;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #F3867B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar a {
+    text-decoration: none;
+}
+
+/* Navigation page tabs */
+#navbar-pages {
+    display: flex;
+    margin-left: 60px;
+}
+#navbar-pages li {
+    margin: 0 60px;
+    opacity: 0.7;
+}
+#navbar-pages h3 {
+    font-size: 36px;
+    color: #2E2D30;
+}
+#navbar-pages .navbar-pages-current {
+    border-bottom: 2px solid #2E2D30;
+    opacity: 0.87 !important;
+}
+
+/* Navigation page links */
+#navbar-links {
+    display: flex;
+    margin: 0 60px;
+}
+#navbar-links li {
+    margin: 0 40px;
+}
+#navbar-links i {
+    font-size: 45px;
+    color: #2E2D30;
+    opacity: 0.7;
+}
+
+/* Navigation bar close button */
+#navbar-close-button {
+    margin-right: 100px;
+}

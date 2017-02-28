@@ -1,0 +1,22 @@
+/* Setting default theme */
+html {
+    background-color: #2E2D30;
+}
+body {
+    position: relative;
+}
+
+/* Homepage*/
+#homepage {
+    height: 100vh;
+}
+section#homepage h1 {
+    font-size: 100px;
+    color: #B2DDEC;
+    text-align: center
+}
+#pic {
+    width: 270px;
+    height: 270px;
+    background-color: white
+}
