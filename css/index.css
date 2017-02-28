@@ -2,13 +2,11 @@
 html {
     background-color: #2E2D30;
 }
-body {
-    position: relative;
-}
 
 /* Homepage*/
-#homepage {
+#homepage-wrapper {
     height: 100vh;
+    border: 1px solid red;
 }
 section#homepage h1 {
     font-size: 100px;
@@ -18,5 +16,8 @@ section#homepage h1 {
 #pic {
     width: 270px;
     height: 270px;
-    background-color: white
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
 }
