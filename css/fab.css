@@ -1,11 +1,14 @@
 /* FAB holder */
 #fab {
-    position: absolute;
+    position: fixed;
     height: 100px;
     width: 100px;
     top: 75px;
     right: 5%;
-    background: url(../statics/FAB.png);
+    background-color: #F3867B;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;

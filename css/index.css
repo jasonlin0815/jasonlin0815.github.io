@@ -1,23 +1,112 @@
 /* Setting default theme */
 html {
     background-color: #2E2D30;
+    color: #B2DDEC;
+}
+section {
+    margin-bottom: 10%;
+    padding-top: 5%;
+    border: 1px solid red;
+}
+.content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 /* Homepage*/
-#homepage-wrapper {
+section#homepage {
+    padding: 0;
     height: 100vh;
-    border: 1px solid red;
+}
+#homepage-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 section#homepage h1 {
     font-size: 100px;
-    color: #B2DDEC;
-    text-align: center
+    margin-top: 100px;
 }
 #pic {
     width: 270px;
     height: 270px;
     background-color: white;
-    margin: 0 auto;
-    margin-top: 15%;
-    margin-bottom: 5%;
+}
+
+/* About section */
+.about-section-div {
+    min-height: 30%;
+    border-bottom: 3px solid rgba(178, 221, 236, 0.8);
+}
+.about-section-div h1 {
+    font-size: 78px;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 30px auto;
+    opacity: 0.54;
+}
+.about-section-div h3 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 30px auto;
+}
+.about-section-div p {
+    font-size: 24px;
+    text-align: justify;
+    line-height: 40px;
+    margin: 0 50px;
+}
+
+/* Introduction section */
+#about-intro {
+    display: flex;
+    align-items: center;
+}
+#about-top-greeting h1 {
+    font-size: 150px;
+    letter-spacing: 10px;
+    margin: 0 40px;
+}
+
+/* Skill bar section */
+#skill-display-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+#experienced-with-skills h3 {
+    opacity: 0.7;
+}
+#still-learning-skills h3 {
+    opacity: 0.5;
+}
+
+/* Experience section */
+.job-sub-section {
+    width: 70%;
+    padding: 30px;
+    border-bottom: 2px solid rgba(178, 221, 236, 0.5);
+}
+.job-sub-section-title {
+    height: 150px;
+    width: 100%;
+    margin: 2% auto;
+}
+.job-sub-section:last-child {
+    margin-bottom: -5%;
+    border-bottom: none;
+}
+#job-section-wrapper:after {
+    content: " ";
+    display: block;
+    clear:both;
+}
+.job-sub-section-left {
+    float: left;
+}
+.job-sub-section-right {
+    float: right;
 }
