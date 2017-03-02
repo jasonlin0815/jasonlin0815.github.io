@@ -8,7 +8,28 @@ $(document).ready(function()
 
     // Scroll to page animation
     $("#navbar-pages li").on("click", navigatePage);
+
+    // Keep track of scroll event to update current page
+    $(window).scroll(scrollActivity);
 });
+
+function scrollActivity()
+{
+    var windowScrollPos = $(window).scrollTop() + 10;
+    $("section").each(function(index) {
+        var t = $(this).position().top;
+        if($(this).position().top < windowScrollPos && $("#fab").children().eq(index).hasClass("fab-current-page") === false)
+        {
+            // Move current indicator from navbar
+            $(".navbar-pages-current").removeClass("navbar-pages-current");
+            $("#navbar-pages li").eq(index).addClass("navbar-pages-current");
+
+            // Move current indicator from fab
+            $(".fab-current-page").removeClass("fab-current-page");
+            $("#fab").children().eq(index).addClass("fab-current-page");
+        }
+    })
+}
 
 function navigatePage() {
     var target = $(this).find("a").attr("href");
@@ -20,10 +41,6 @@ function navigatePage() {
         $("html, body").animate({
             scrollTop: $(target).offset().top
         }, 500);
-
-        // Update current page
-        currentPage.removeClass("navbar-pages-current");
-        $(this).addClass("navbar-pages-current");
     }
 
     // Close navbar after click
