@@ -29,7 +29,7 @@
     font-size: 36px;
     color: #2E2D30;
 }
-#navbar-pages .navbar-pages-current {
+.navbar-pages-current {
     border-bottom: 2px solid #2E2D30;
     opacity: 0.87 !important;
 }
@@ -51,4 +51,15 @@
 /* Navigation bar close button */
 #navbar-close-button {
     margin: 0 50px 0 100px !important;
+}
+
+/* Hover effects */
+#navbar-pages:hover {
+    opacity: 0.7;
+}
+#navbar-pages li:hover {
+    border-bottom: 2px solid #2E2D30;
+}
+#navbar-links i:hover {
+    opacity: 1;
 }
