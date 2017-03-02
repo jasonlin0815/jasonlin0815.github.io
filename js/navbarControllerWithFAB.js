@@ -17,7 +17,6 @@ function scrollActivity()
 {
     var windowScrollPos = $(window).scrollTop() + 10;
     $("section").each(function(index) {
-        var t = $(this).position().top;
         if($(this).position().top < windowScrollPos && $("#fab").children().eq(index).hasClass("fab-current-page") === false)
         {
             // Move current indicator from navbar

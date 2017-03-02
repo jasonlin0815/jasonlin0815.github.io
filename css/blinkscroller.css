@@ -1,0 +1,29 @@
+#blinking-scroller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    z-index: 1;
+}
+#blinking-scroller div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    background-color: #69676E;
+    opacity: 1;
+    margin: 2px;
+}
+
+#blinking-scroller-2 {
+    width: 22px !important;
+    height: 22px !important;
+    opacity: 0.6 !important;
+}
+
+#blinking-scroller-3 {
+    width: 15px !important;
+    height: 15px !important;
+    opacity: .3 !important;
+}
