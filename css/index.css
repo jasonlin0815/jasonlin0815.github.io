@@ -4,8 +4,12 @@ html {
     color: #B2DDEC;
 }
 section {
+    height: 100%;
     margin-bottom: 10%;
     padding-top: 5%;
+}
+section:last-child {
+    margin-bottom: 0;
 }
 .content-wrapper {
     max-width: 1280px;
@@ -108,4 +112,26 @@ section#homepage h1 {
 }
 .job-sub-section-right {
     float: right;
+}
+
+/* Dropdown footer */
+#dropdown-footer-wrapper {
+    height: 200px;
+}
+#dropdown-footer {
+    height: 0;
+    background-color: #B2DDEC;
+    opacity: 0.8;
+    color: #2E2D30;
+}
+#dropdown-footer h3 {
+    display: none;
+    font-size: 27px;
+    padding: 20px 20px;
+    opacity: 0;
+}
+#dropdown-footer div {
+    display: none;
+    justify-content: center;
+    opacity: 0;
 }
