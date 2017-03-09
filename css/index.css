@@ -1,0 +1,389 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Setting default theme */
+html {
+    background-color: #2E2D30;
+    color: #B2DDEC;
+}
+section {
+    height: 100%;
+    margin-bottom: 10%;
+    padding-top: 5%;
+}
+section:last-child {
+    margin-bottom: 0;
+}
+.content-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+/* FAB holder */
+#fab {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 75px;
+    right: 5%;
+    background-color: #F3867B;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Menu icon that darkens current viewing page */
+#fab div {
+    width: 55px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: #2E2D30;
+    opacity: 0.5;
+}
+.fab-current-page {
+    opacity: 1 !important;
+}
+/* Navigation bar, default hidden */
+#navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+    background-color: #F3867B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+#navbar a {
+    text-decoration: none;
+}
+
+/* Navigation page tabs */
+#navbar-pages {
+    display: flex;
+    margin-left: 60px;
+}
+#navbar-pages li {
+    margin: 0 30px;
+    opacity: 0.7;
+}
+#navbar-pages h3 {
+    font-size: 36px;
+    color: #2E2D30;
+}
+.navbar-pages-current {
+    border-bottom: 2px solid #2E2D30;
+    opacity: 0.87 !important;
+}
+
+/* Navigation page links */
+#external-links {
+    display: flex;
+    margin: 0 60px;
+}
+#external-links li {
+    margin: 0 20px;
+}
+#external-links i {
+    font-size: 45px;
+    color: #2E2D30;
+    opacity: 0.7;
+}
+
+/* Navigation bar close button */
+#navbar-close-button {
+    margin: 0 50px 0 100px !important;
+}
+
+/* Hover effects */
+#navbar-pages:hover {
+    opacity: 0.7;
+}
+#navbar-pages li:hover {
+    border-bottom: 2px solid #2E2D30;
+}
+#navbar-links i:hover {
+    opacity: 1;
+}
+
+/* Homepage*/
+section#homepage {
+    padding: 0;
+    height: 100vh;
+}
+#homepage-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#homepage h1 {
+    font-size: 100px;
+    margin-top: 100px;
+}
+#pic {
+    width: 450px;
+    height: 450px;
+    background: url("../statics/picture.png") center no-repeat;
+}
+
+#blinking-scroller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 1;
+}
+
+/* Blinking scroller */
+#blinking-scroller div {
+    width: 22px;
+    height: 22px;
+    margin: 2px;
+    border-radius: 50% 50%;
+    background-color: #69676E;
+}
+#blinking-scroller div:nth-child(2){
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+#blinking-scroller div:nth-child(3) {
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+}
+
+
+/* About section */
+.about-section-div {
+    min-height: 30%;
+    border-bottom: 3px solid rgba(178, 221, 236, 0.8);
+}
+.about-section-div h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 30px auto;
+    opacity: 0.54;
+}
+.about-section-div h3 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 30px auto;
+}
+.about-section-div p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 40px;
+    margin: 0 50px;
+}
+
+/* Introduction section */
+#about-intro {
+    display: flex;
+    align-items: center;
+}
+#about-top-greeting h1 {
+    font-size: 150px;
+    letter-spacing: 10px;
+    margin: 0 40px;
+}
+
+/* Skill bar section */
+#skill-display-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.skill-progress-bar {
+    position: relative;
+    height: 170px;
+    width: 170px;
+    margin: 0 auto;
+}
+.skill-progress-bar h3 {
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    white-space: normal;
+    transform: translate(-50%, -50%);
+}
+.skill-content-wrapper {
+    width: 30%;
+}
+.experienced-with-skills h3 {
+    opacity: 0.7;
+}
+.still-learning-skills h3 {
+    opacity: 0.5;
+}
+
+/* Experience section */
+.job-sub-section {
+    width: 70%;
+    padding: 30px;
+    border-bottom: 2px solid rgba(178, 221, 236, 0.5);
+}
+.job-sub-section:last-child {
+    margin-bottom: -5%;
+    border-bottom: none;
+}
+.job-sub-section-title {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    margin: 2% auto;
+    white-space: nowrap;
+}
+.job-sub-section-title h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 85px;
+    opacity: 0.15;
+}
+.job-sub-section-title h3 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+    font-size: 46px;
+}
+.job-sub-section-title p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    opacity: 0.7;
+}
+#job-section-wrapper:after {
+    content: " ";
+    display: block;
+    clear:both;
+}
+.job-sub-section-left {
+    float: left;
+}
+.job-sub-section-right {
+    float: right;
+}
+
+/* Education section */
+.education-sub-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.education-sub-section h1 {
+    opacity: 1;
+    margin: 0;
+}
+.education-sub-section h3 {
+    font-size: 21px;
+    align-self: center;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* About section salute */
+#about-bottom-salute {
+    position: relative;
+    height: 200px;
+    flex-direction: row;
+    white-space: nowrap;
+}
+#about-bottom-salute h1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 100px;
+}
+#about-bottom-salute h3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+}
+
+/* Dropdown footer */
+#dropdown-footer-wrapper {
+    height: 200px;
+}
+#dropdown-footer {
+    height: 0;
+    background-color: #B2DDEC;
+    opacity: 0.8;
+    color: #2E2D30;
+}
+#dropdown-footer h3 {
+    display: none;
+    font-size: 27px;
+    padding: 20px 20px;
+    opacity: 0;
+}
+#dropdown-footer div {
+    display: none;
+    justify-content: center;
+    opacity: 0;
+}
