@@ -7,20 +7,14 @@
         <title>Jason Lin - Software Designer</title>
 
         <!-- CSS style links -->
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/navbar.css">
-        <link rel="stylesheet" href="css/fab.css">
-        <link rel="stylesheet" href="css/blinkscroller.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
         <!-- Javascript animation -->
         <script src="js/jquery-3.1.1.min.js"></script>  <!-- jQuery -->
         <script src="js/jquery.easing.1.3.js"></script> <!-- Easing effect -->
-        <script src="js/navbarControllerWithFAB.js" type="text/javascript"></script> <!-- fab & navbar effect -->
-        <script src="js/blinkingScroller.js" type="text/javascript"></script> <!-- homepage scrolling indicator -->
-        <script src="js/typingEffect.js" type="text/javascript"></script> <!-- homepage typing effect -->
-        <script src="js/dropdownFooter.js" type="text/javascript"></script> <!-- dropdown footer effect -->
+        <script src="js/circle-progress.min.js"></script> <!-- circle progress bar plugin -->
+        <script src="js/websiteAnimation.js" type="text/javascript"></script> <!-- Handling animation of the website -->
     </head>
     <!-- End of head descriptor -->
 
@@ -53,6 +47,10 @@
             <div class="content-wrapper" id="homepage-wrapper">
                 <div id="pic"></div>
                 <h1><span id="homepage-typing-display"></span><span id="homepage-cursor">|</span></h1>
+                <noscript>
+                    <h1> I am a </h1>
+                    <h1> Software Engineer.| </h1>
+                </noscript>
 
                 <!-- Floating scrolling indicator -->
                 <div id="blinking-scroller">
@@ -87,7 +85,10 @@
                     <h1> Skills </h1>
                     <div id="skill-display-wrapper">
                         <!-- Most comfortable skills -->
-                        <div id="most-comfortable-skills">
+                        <div class="skill-content-wrapper most-comfortable-skills">
+                            <div class="skill-progress-bar high-skill-rating">
+                                <h3> Most Comfortable </h3>
+                            </div>
                             <h3> C/C++ </h3>
                             <h3> Agile </h3>
                             <h3> Java </h3>
@@ -95,7 +96,12 @@
                             <h3> C# </h3>
                         </div>
                         <!-- Experienced with skills -->
-                        <div id="experienced-with-skills">
+                        <div class="skill-content-wrapper experienced-with-skills">
+                            <div class="skill-progress-bar mid-skill-rating">
+                                <div class="skill-progress-bar-overlay">
+                                    <h3> Experienced With </h3>
+                                </div>
+                            </div>
                             <h3> Secure Programming </h3>
                             <h3> Unreal Engine </h3>
                             <h3> Cryptography </h3>
@@ -103,7 +109,12 @@
                             <h3> Python </h3>
                         </div>
                         <!-- Still learning skills -->
-                        <div id="still-learning-skills">
+                        <div class="skill-content-wrapper still-learning-skills">
+                            <div class="skill-progress-bar low-skill-rating">
+                                <div class="skill-progress-bar-overlay">
+                                    <h3> Still Learning </h3>
+                                </div>
+                            </div>
                             <h3> Javascript </h3>
                             <h3> HTML5 </h3>
                             <h3> CSS3 </h3>
@@ -138,9 +149,11 @@
             <div class="about-section-div">
                 <div class="content-wrapper">
                     <h1> Education </h1>
-                    <div class="education-sub-section">
-                        <h1> Purdue University </h1>
-                        <h3> B.S. in Computer Engineering </h3>
+                    <div class="education-sub-section-wrapper">
+                        <div class="education-sub-section">
+                            <h1> Purdue University </h1>
+                            <h3> B.S. in Computer Engineering </h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,9 +161,9 @@
             <!-- Conclusion section -->
             <div class="about-section-div">
                 <div class="content-wrapper">
-                    <h3> keep scrolling to checkout projects that I have been doing! </h3>
                     <!-- The big thanks! -->
                     <div id="about-bottom-salute">
+                        <h3> keep scrolling to checkout projects that I have been doing! </h3>
                         <h1> Thanks! </h1>
                     </div>
                 </div>
