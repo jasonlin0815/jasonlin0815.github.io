@@ -18,4 +18,4 @@ $(document).ready(function() {
         }
     });
 });
-ga('footer','drop');
+_gaq.push(['_trackEvent', 'footer','drop']);
